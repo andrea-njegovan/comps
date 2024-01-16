@@ -1,6 +1,11 @@
 import Button from "./Button";
+import { GoBell, GoCloud, GoDatabase } from "react-icons/go";
 
 function App() {
+	const handleClick = () => {
+		console.log("Click!!");
+	};
+
 	return (
 		<div>
 			<div>
@@ -8,7 +13,10 @@ function App() {
 					success
 					rounded
 					outline
+					className={"mb-3"}
+					onClick={handleClick}
 				>
+					<GoBell />
 					Click Me!
 				</Button>
 			</div>
@@ -20,6 +28,7 @@ function App() {
 					danger
 					outline
 				>
+					<GoCloud />
 					Super!
 				</Button>
 			</div>
@@ -37,6 +46,7 @@ function App() {
 					primary
 					rounded
 				>
+					<GoDatabase />
 					See Deal!
 				</Button>
 			</div>
